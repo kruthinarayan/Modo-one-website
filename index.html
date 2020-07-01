@@ -13,6 +13,7 @@
         <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital@1&display=swap" rel="stylesheet">
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
         <title>Modo</title>
     </head>
 
@@ -41,14 +42,35 @@
                 </nav>
                 <!-- Navbar ends here -->
 
-                <div class="col-10 offset-1">
+                <div class="col-md-10 offset-md-1">
 
                     <!-- Robotics -->
                     <div class="row my-5 pb-5 text-lg-left text-center">
                         <div class="col-lg-6 img">
-                            <a class="video-link" target="_blank" href="https://www.youtube.com/watch?v=JuJqhvUa6TM&feature=youtu.be" data-width="300" data-height="240">
-                                <img src="/images/Youtube.png" class="img-fluid" alt="Youtube">
+                            <a class="video-link" data-toggle="modal" data-target="#myModal" data-width="300" data-height="240">
+                                <img src="/images/Youtube.png" class="img-fluid yt-img" alt="Youtube">
                             </a>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            <h4 class="modal-title" id="myModalLabel"></h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="embed-responsive embed-responsive-16by9">
+                                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/JuJqhvUa6TM" allowfullscreen></iframe>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End of Home Video Modal -->
                             <img src="images/video-img.png" class="rounded img-fluid h-100" alt="Jumpstart Robotics">
                         </div>
                         <div class="col-lg-6 mt-lg-0 mt-5">
@@ -72,25 +94,47 @@
                     </div>
                 </div>
             </div>
-            <!-- Robotics and Programming ends here -->
+            <!-- Robotics ends here -->
 
             <!-- Testimonials -->
-            <div class="row my-5 py-5 text-center bg-light">
+            <div class="row my-5 py-5 text-center bg-light text-dark">
                 <div class="container">
-                    <div class="col-10 offset-1">
+                    <div class="col-md-10 offset-md-1">
                         <h5 class="w-100 py-5 montserrat bold font-md line-height-sm testimonial-head">WHAT MODO PARENTS SAY</h5>
                         <div class="row">
-                            <div class="col-lg-6">
-                                <p><i class="fa fa-quote-left fa fa-2x" aria-hidden="true"></i></p>
-                                <p class="testimonials pt-serif light primary">Honestly, it was so much fun. Though videos explain complicated things, it was explained in a very kid-friendly way. JumpStart has taught my kid a lot and I’m ever grateful to it.
-                                </p>
-                                <p class="montserrat bold font-md line-height-sm text-uppercase mt-4">Veena S</p>
-                            </div>
-                            <div class="col-lg-6 mt-lg-0 mt-5">
-                                <p><i class="fa fa-quote-left fa fa-2x" aria-hidden="true"></i></p>
-                                <p class="testimonials pt-serif light primary">RoboModo: JumpStart course has helped my daughter understand the basics of Robotics and how it is being used in today’s world.
-                                </p><br>
-                                <p class="montserrat bold font-md line-height-sm text-uppercase mt-4">Sonia S</p>
+                            <div id="client-testimonial-carousel" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner pb-5" role="listbox">
+                                    <div class="carousel-item active text-center p-4">
+                                        <p><i class="fa fa-quote-left fa fa-2x" aria-hidden="true"></i></p>
+                                        <p class="testimonials pt-serif light primary">Honestly, it was so much fun. Though videos explain complicated things, it was explained in a very kid-friendly way. JumpStart has taught my kid a lot and I’m ever grateful to it.
+                                        </p>
+                                        <p class="montserrat bold font-md line-height-sm text-uppercase mt-4">Veena S</p>
+                                    </div>
+                                    <div class="carousel-item text-center p-4">
+                                        <p><i class="fa fa-quote-left fa fa-2x" aria-hidden="true"></i></p>
+                                        <p class="testimonials pt-serif light primary">RoboModo: JumpStart course has helped my daughter understand the basics of Robotics and how it is being used in today’s world.
+                                        </p>
+                                        <p class="montserrat bold font-md line-height-sm text-uppercase mt-4">Sonia S</p>
+                                    </div>
+                                    <div class="carousel-item text-center p-4">
+                                        <p><i class="fa fa-quote-left fa fa-2x" aria-hidden="true"></i></p>
+                                        <p class="testimonials pt-serif light primary">I'm glad about the JumpStart course, even my son was excited, immensely interested in the course. Well planned course with good support.
+                                        </p>
+                                        <p class="montserrat bold font-md line-height-sm text-uppercase mt-4">Bindu</p>
+                                    </div>
+                                    <div class="carousel-item text-center p-4">
+                                        <p><i class="fa fa-quote-left fa fa-2x" aria-hidden="true"></i></p>
+                                        <p class="testimonials pt-serif light primary">My son keenly involves himself in pursuing the JumpStart course, and feels excited while moving his robot accordingly. Very well-planned course.
+                                        </p>
+                                        <p class="montserrat bold font-md line-height-sm text-uppercase mt-4">Kiran J</p>
+                                    </div>
+                                </div>
+                                <ol class="carousel-indicators">
+                                    <li data-target="#client-testimonial-carousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#client-testimonial-carousel" data-slide-to="1"></li>
+                                    <li data-target="#client-testimonial-carousel" data-slide-to="2"></li>
+                                    <li data-target="#client-testimonial-carousel" data-slide-to="3"></li>
+                                </ol>
                             </div>
                         </div>
                     </div>
@@ -100,7 +144,7 @@
 
             <!-- Jumpstart steps -->
             <div class="container" id="jumpstart">
-                <div class="col-10 offset-1">
+                <div class="col-md-10 offset-md-1">
                     <div class="row my-5 py-5 justify-content-center">
                         <div class="col-lg-6 text-center semi-bold">
                             <h1 class="font-xl montserrat grey line-height-sm head">Let's Jumpstart!</h1>
@@ -162,32 +206,71 @@
                     </div>
                     <!-- Jumpstart steps ends here -->
 
-
                     <!-- Our Customers -->
-                    <div class="row justify-content-center my-5 clients">
+                    <div class="row justify-content-center my-5 pb-5 clients">
                         <div class="col-lg-6 text-center my-5">
                             <h1 class="font-xl montserrat semi-bold grey line-height-sm head">We are famous :)</h1>
                             <p class="pt-3">Thanks to our customers and their feedback, we have been featured on some of the most reputed platforms. </p>
                         </div>
                         <div class="row w-100 text-center">
                             <div class="col-sm">
-                                <img src="/images/yourstory.png" class="img-fluid mx-auto" alt="Higher Education">
+                                <img src="/images/ystory1.png" class="img-fluid mx-auto" alt="Higher Education">
                             </div>
                             <div class="col-sm">
-                                <img src="/images/higher-edu.jpg" class="img-fluid mx-auto" alt="Higher Education">
+                                <img src="/images/high-edu.png" class="img-fluid mx-auto" alt="Higher Education">
                             </div>
                             <div class="col-sm">
-                                <img src="/images/yahoo.png" class="img-fluid mx-auto" alt="yahoo">
+                                <img src="/images/yah.png" class="img-fluid mx-auto" alt="yahoo">
                             </div>
                         </div>
                     </div>
                     <!-- Our Customers ends here -->
+
+
+                    <!-- Contact us -->
+                    <div class="row contact-us my-5 pb-5">
+                        <h1 class="w-100 text-center font-xl montserrat semi-bold grey pb-5 head">Contact Us</h1>
+                        <div class=" offset-md-2 col-md-8">
+                            <h4 class="text-center">Send A Message</h4>
+                            <p class="pt-serif light font-md text-center pb-5">Do you have a question? You can get in touch with us via email or use the form below.</p>
+                            <form action="/send_mail.php" method="post">
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="inputName">Name*</label>
+                                        <input type="text" name="name" class="form-control rounded-0" id="inputPassword4">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="inputEmail4">Email*</label>
+                                        <input type="email" name="email" class="form-control rounded-0" id="inputEmail4">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputPhone">Mobile</label>
+                                    <input type="text" name="phone" class="form-control rounded-0" id="inputPhone">
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlTextarea1">Message*</label>
+                                        <textarea class="form-control rounded-0" name="message" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-4 align-self-center mx-auto pt-3">
+                                    <button type="submit" class="btn btn-md btn-warning rounded-0 btn-block">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- End of Contact us -->
+
+
                 </div><!-- End of col -->
             </div> <!-- End of container -->
         </div>
         </div>
 
+
         <hr>
+
 
         <!-- Footer -->
         <footer>
@@ -219,20 +302,21 @@
                         </div>
 
                         <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
-                            <h5 class="montserrat font-600 font-sm primary">SUBSCRIBE</h5>
-                            <ul class="list-unstyled mt-4">
-                                <li class="pt-serif light font-sm">
-                                    Sign up if you want to stay up to date and recieve notifications.
-                                </li>
-                                <li class="pt-serif light font-sm">
-                                    <div class="input-group mt-2">
-                                        <input type="email" class="form-control">
-                                        <span class="input-group-btn border-0">
-                                            <button class="btn btn-secondary rounded-0" type="submit">></button>
-                                        </span>
-                                    </div>
-                                </li>
-                            </ul>
+                            <h5 class="montserrat font-600 font-sm primary">Social Media Links</h5>
+                            <div class="mt-4 social-icons">
+                               <span>
+                                    <a href="https://www.facebook.com/ModoEdulabs/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                               </span> &nbsp;
+                            <span>
+                                <a href="https://twitter.com/ModoEdulabs" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            </span> &nbsp;
+                            <span>
+                                <a href="https://www.youtube.com/channel/UCyHZFylecpPcbEmZgEhHYuw" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+                            </span> &nbsp;
+                            <span>
+                                <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                            </span>
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -242,6 +326,14 @@
         </div>
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
         <script src="/js/bootstrap.min.js"></script>
+        <script>
+            $('#myModal').on('shown.bs.modal', function () {
+                $('#video1')[ 0 ].play();
+            })
+            $('#myModal').on('hidden.bs.modal', function () {
+                $('#video1')[ 0 ].pause();
+            })
+        </script>
     </body>
 
 </html>
